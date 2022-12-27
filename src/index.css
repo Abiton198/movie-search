@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
   color: #333;
-  background-color:#fafa;
+  background-color:blanchedalmond;
 }
 
 .title{
@@ -12,3 +12,17 @@ body{
   text-align: center;
   font-family: chilanka;
 }
+
+.form-control{
+  border-radius: 30px;
+}
+
+.text-justify, .rating, .title, .release-date{
+  width: 250px;
+}
+
+/* .movie-list{
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  background-color: blanchedalmond;
+} */
