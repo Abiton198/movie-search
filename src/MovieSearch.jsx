@@ -47,6 +47,26 @@ const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKk
 <div className="align-self-center">
 
           <form onSubmit={searchMovie} >
+                  {/* Movie Trailer */}
+                             <div className='mt-2 col-sm'>
+                              <ReactPlayer url={videoURL} controls={true}/>
+                                 </div>
+
+                          <div className='form-group row m-2'> 
+                              <label  className='col-sm-2 col-form-label'>Movie Trailer: { " " }</label>
+                                          
+                                          <div className='col-sm-3'>
+                                            <input className='form-control' 
+                                                  type="text" 
+                                                  placeholder='eg: Black Panther Wakanda' 
+                                                  onChange={(e)=>{setVideo(e.target.value)}}/>
+                                              </div>
+
+                                            <div className='col-sm-1 offset-1 '>
+                                              <button className='btn btn-dark mt-2 w-100' onClick={()=>{handleSearch()}}>Search</button>
+                                                  </div>
+                                            
+                              </div>
             <div className='form-group row m-2'>
                         <label htmlFor='query' className='col-sm-2 col-form-label'>Movie Overview</label>
                         
@@ -70,26 +90,6 @@ const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKk
 
                   </div>
 
-{/* Movie Trailer */}
-
-        <div className='form-group row m-2'> 
-            <label  className='col-sm-2 col-form-label'>Movie Trailer: { " " }</label>
-                        
-                        <div className='col-sm-3'>
-                          <input className='form-control' 
-                                type="text" 
-                                placeholder='eg: Black Panther Wakanda' 
-                                onChange={(e)=>{setVideo(e.target.value)}}/>
-                            </div>
-
-                          <div className='col-sm-1 offset-1 '>
-                            <button className='btn btn-dark mt-2 w-100' onClick={()=>{handleSearch()}}>Search</button>
-                                </div>
-                          
-                          <div className='mt-2 col-sm'>
-                              <ReactPlayer url={videoURL} controls={true}/>
-                                 </div>
-            </div>
 
             </form>
 
