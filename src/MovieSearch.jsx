@@ -5,7 +5,7 @@ import movieTrailer from 'movie-trailer'
 
 export default function MovieSearch() {
 const [query, setQuery] = useState('') //state for query
-const [movies, setMovies] = useState([]) //state for movies from database(data.results)
+const [movies, setMovies] = useState([]) // state for movies from database(data.results)
 const [video, setVideo] = useState('inception') 
 const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKkl1WyM') //stte for the youtube video default   "https://youtu.be/sa9l-dTv9Gk"
 
@@ -48,7 +48,7 @@ const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKk
 
           <form onSubmit={searchMovie} >
                   {/* Movie Trailer */}
-                             <div className='mt-2 col-sm'>
+                             <div className='ml-4' width='100px'>
                               <ReactPlayer url={videoURL} controls={true}/>
                                  </div>
 
@@ -67,6 +67,8 @@ const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKk
                                                   </div>
                                             
                               </div>
+
+           {/* Movie overview */}
             <div className='form-group row m-2'>
                         <label htmlFor='query' className='col-sm-2 col-form-label'>Movie Overview</label>
                         
@@ -93,6 +95,7 @@ const [videoURL, setVideoURL] = useState('https://www.youtube.com/watch?v=_Z3QKk
 
             </form>
 
+<p className='small-text'>@abitondev</p>
     
  </div>
   )

@@ -20,6 +20,9 @@ body{
 .text-justify, .rating, .title, .release-date{
   width: 250px;
 }
+.small-text{
+  font-size: 10px;
+}
 
 /* .movie-list{
   border-radius: 20px;
